@@ -5,7 +5,7 @@ define(["controllersFactory",
   'directives/landing-directives'],
   function(controllersFactory) {
 
-  controllersFactory.controller('DeveloperCtrl',
+  controllersFactory.controller('LandingCtrl',
     ['$scope',
 
     function($scope,
