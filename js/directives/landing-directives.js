@@ -7,4 +7,11 @@ define(['directivesFactory'], function(directivesFactory){
       templateUrl: 'templates/partials/navbar.html'
     };
   });
+
+  directivesFactory.directive('customFooter', function() {
+    return {
+      restrict: 'E',
+      templateUrl: 'templates/partials/custom-footer.html'
+    };
+  });
 });

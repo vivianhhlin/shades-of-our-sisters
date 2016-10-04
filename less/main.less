@@ -1,0 +1,233 @@
+/* -----------------------------------------GLOBAL -----------------------------------------*/
+
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+
+
+/*----------------------------------------- VARIABLES ------------------------------------*/
+
+
+@footer-height: 50px;
+@footer-background-color: orange;
+@navbar-height: @footer-height;
+@navbar-background-color: black;
+
+@pink: #fccdb1;
+@yellow: #fdeaa6;
+@green: #98bcaa
+@maroon: #8b181a;
+@brown: #b27253;
+
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html, body, #ng-view, #ng-body {
+  height: 100%;
+  width: 100%;
+  padding:0;
+  margin:0;
+  font-family: 'Ubuntu', serif;
+}
+
+p {
+    font-size: medium;
+}
+
+ul {
+    text-align: justify;
+    list-style: none;
+}
+
+li span {
+    padding: auto;
+}
+
+.row {
+  margin:0;
+}
+
+
+/* -----------------------------------------NAVBAR (& GLOBAL) ----------------------------------------- */
+
+a {
+    text-decoration: none;
+    word-wrap: break-word;
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+    outline: 0;
+}
+
+a:before,
+a:after {
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+.dropdown-menu{
+    text-align: center;
+}
+
+.dropdown ul li a{
+  color: #acb7c0;
+  background-color: white;
+  font-weight: bold;
+}
+
+.nav-pills {
+  height: @navbar-height;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus{
+
+}
+
+.nav-pills>li>a {
+  padding: 18px 15px;
+}
+
+.navbar {
+  font-weight: 800;
+  font-size: 14px;
+  height: @navbar-height;
+  background-color: @navbar-background-color;
+  margin-bottom: @navbar-height; /* height of the navbar */
+}
+
+.navbar:hover{
+}
+
+.navbar-fixed-top{
+  margin-bottom: 0px;
+}
+
+.navbar-fixed-top .container{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+/*------------------------------------------ FOOTER ---------------------------------*/
+
+footer {
+  padding: 15px 0 15px 0;
+  text-align: center;
+  background-color: @footer-background-color;
+}
+
+footer p {
+  text-align: center;
+  font-style: italic;
+  padding: 0 0 5px 0;
+  margin: 0;
+}
+
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -@footer-height;
+}
+
+.page-wrap:after {
+  display: block;
+}
+
+custom-footer, footer, .page-wrap:after {
+  height: @footer-height;
+}
+
+/*----------------------------------------- LANDING ----------------------------------*/
+
+
+
+
+
+/* ----------------------------------------- MEDIA QUERIES ----------------------------------------- */
+
+@media (max-width: 480px){
+
+  /* NAVBAR */
+    #r0{
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .navbar .navbar-collapse {
+        padding: 10px;
+        max-height: none;
+      }
+
+    .navbar ul {
+        float: none;
+    }
+
+    .navbar ul:not {
+        display: block;
+    }
+
+    .navbar li {
+        float: none;
+        display: block;
+    }
+
+    .navbar li a {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+}
+
+@media (max-width: 690px){
+  .navbar .container{
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+  .nav-pills, .navbar-right{
+    height: auto;
+    background-color: white;
+  }
+}
+
+@media (min-width: 770px){
+      .dropdown:hover .dropdown-menu {
+        display: block;
+        border-radius: 0;
+     }
+}
+
+@media (min-width: 960px){
+  .navbar{
+      padding-left: 10%;
+      padding-right: 10%;
+     }
+}
+
+@media (max-width: 1000px) and (min-width: 690px){
+
+    #r0{
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .navbar .container{
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+}
+

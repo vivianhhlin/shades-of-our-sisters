@@ -11,5 +11,4 @@ define(["controllersFactory",
     function($scope,
       projectService) {
   }]);
-
 });
