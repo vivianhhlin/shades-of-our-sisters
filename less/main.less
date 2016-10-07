@@ -5,17 +5,17 @@
 
 /*----------------------------------------- VARIABLES ------------------------------------*/
 
-
-@footer-height: 50px;
-@footer-background-color: grey;
-@navbar-height: @footer-height;
-@navbar-background-color: black;
-
 @pink: #fccdb1;
 @yellow: #fdeaa6;
-@green: #98bcaa
+@green: #98bcaa;
 @maroon: #8b181a;
 @brown: #b27253;
+
+@footer-height: 50px;
+@footer-background-color: white;
+@navbar-height: @footer-height;
+@navbar-background-color: white;
+
 
 html * {
   -webkit-font-smoothing: antialiased;
@@ -86,7 +86,7 @@ a:after {
 }
 
 .dropdown ul li a{
-  color: #acb7c0;
+  color: @maroon;
   background-color: white;
   font-weight: bold;
 }
@@ -101,6 +101,11 @@ a:after {
 
 .nav-pills>li>a {
   padding: 18px 15px;
+  color: @maroon;
+}
+
+.navbar-header {
+  height: 100%;
 }
 
 .navbar {
@@ -123,12 +128,21 @@ a:after {
   padding-right: 0;
 }
 
+.navbar-brand {
+  background: url('../resources/logos/navbar_logo.png');
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 270px;  /* TODO: can we not hardcode this? */
+  padding: 0;
+}
 
 /*------------------------------------------ FOOTER ---------------------------------*/
 
 footer {
   padding: 15px 0 15px 0;
   background-color: @footer-background-color;
+  color: @maroon;
 
   span {
     display: inline-block;
@@ -138,7 +152,7 @@ footer {
 }
 
 .page-wrap {
-  min-height: 100%;
+  height: 100%;
   /* equal to footer height */
   margin-bottom: -@footer-height;
 }
@@ -166,8 +180,43 @@ custom-footer, footer, .page-wrap:after {
 
 /*----------------------------------------- LANDING ----------------------------------*/
 
+#blurb {
+  #blurb-logo {
+    background: url('../resources/logos/large_logo.png');
+    height: 50%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
 
+#landing-background {
+  background-color: white;
+  padding-top: @navbar-height;
+  padding-bottom: @footer-height;
 
+  #profile-left {
+    background: url('../resources/images/sonya.jpg');
+    float: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  #profile-right {
+    background: url('../resources/images/patricia.png');
+    float: right;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  div {
+    width: 33%;
+    height: 100%;
+    display: inline-block;
+    margin: auto;
+  }
+}
 
 
 /* ----------------------------------------- MEDIA QUERIES ----------------------------------------- */
