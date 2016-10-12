@@ -11,10 +11,11 @@
 @maroon: #8b181a;
 @brown: #b27253;
 
-@footer-height: 50px;
+@footer-height: 80px;
 @footer-background-color: white;
 @navbar-height: @footer-height;
 @navbar-background-color: white;
+@navbar-font-size: 20px;
 
 
 html * {
@@ -110,7 +111,7 @@ a:after {
 
 .navbar {
   font-weight: 800;
-  font-size: 14px;
+  font-size: @navbar-font-size;
   height: @navbar-height;
   background-color: @navbar-background-color;
   margin-bottom: @navbar-height; /* height of the navbar */
@@ -181,12 +182,21 @@ custom-footer, footer, .page-wrap:after {
 /*----------------------------------------- LANDING ----------------------------------*/
 
 #blurb {
+  text-align: center;
+
   #blurb-logo {
     background: url('../resources/logos/large_logo.png');
     height: 50%;
     width: 100%;
     background-repeat: no-repeat;
     background-size: contain;
+  }
+
+  p {
+    padding-top: 10%;
+    width: 50%;
+    margin: 10% auto;
+    border-top: 2px solid @maroon;
   }
 }
 
@@ -198,14 +208,15 @@ custom-footer, footer, .page-wrap:after {
   #profile-left {
     background: url('../resources/images/sonya.jpg');
     float: left;
-    background-repeat: no-repeat;
-    background-size: contain;
   }
 
   #profile-right {
     background: url('../resources/images/patricia.png');
     float: right;
+  }
 
+  #profile-right, #profile-left {
+    background-position: 50%;
     background-repeat: no-repeat;
     background-size: contain;
   }
