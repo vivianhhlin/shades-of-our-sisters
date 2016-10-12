@@ -17,6 +17,7 @@
 @navbar-background-color: white;
 @navbar-font-size: 20px;
 
+@text-font-size: 12px;
 
 html * {
   -webkit-font-smoothing: antialiased;
@@ -219,7 +220,25 @@ custom-footer, footer, .page-wrap:after {
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: contain;
+    color: white;
+    text-align: center;
+    padding: 5%;
+
+    p {
+      height: 50%;
+    }
+
+    .profile-description {
+      border-top: 1px solid white;
+      padding-top: @text-font-size;
+    }
   }
+
+  // #profile-right:hover, #profile-left:hover {
+  //   -webkit-box-shadow: inset 6px 10px 141px 200px rgba(0,0,0,0.42);
+  //   -moz-box-shadow: inset 6px 10px 141px 200px rgba(0,0,0,0.42);
+  //   box-shadow: inset 6px 10px 141px 200px rgba(0,0,0,0.42);
+  // }
 
   div {
     width: 33%;
