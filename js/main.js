@@ -66,7 +66,7 @@ THIS FILE IS THE FIRST JAVASCRIPT FILE THAT IS LOADED AND CONTROLS THE INITIALAL
       function() {
         app.config(['$routeProvider', function($routeProvider) {
           $routeProvider
-            .when('/', {templateUrl: 'templates/landing.html', controller: "LandingCtrl"}).
+            .when('/', {templateUrl: 'templates/landing/landing.html', controller: "LandingCtrl"}).
             otherwise({redirectTo: '/'});
         }]);
 

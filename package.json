@@ -1,0 +1,25 @@
+{
+  "name": "shades-of-our-sisters",
+  "version": "1.0.0",
+  "description": "- use watch-http-server npm module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/upwindproductions/shades-of-our-sisters.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/upwindproductions/shades-of-our-sisters/issues"
+  },
+  "homepage": "https://github.com/upwindproductions/shades-of-our-sisters#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-less": "^1.4.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "jit-grunt": "^0.10.0"
+  }
+}

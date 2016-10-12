@@ -1,0 +1,323 @@
+/* -----------------------------------------GLOBAL -----------------------------------------*/
+
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+
+
+/*----------------------------------------- VARIABLES ------------------------------------*/
+
+@pink: #fccdb1;
+@yellow: #fdeaa6;
+@green: #98bcaa;
+@maroon: #8b181a;
+@brown: #b27253;
+
+@footer-height: 80px;
+@footer-background-color: white;
+@navbar-height: @footer-height;
+@navbar-background-color: white;
+@navbar-font-size: 20px;
+
+@text-font-size: 12px;
+
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html, body, #ng-view, #ng-body {
+  height: 100%;
+  width: 100%;
+  padding:0;
+  margin:0;
+  font-family: 'Ubuntu', serif;
+}
+
+p {
+    font-size: medium;
+}
+
+ul {
+    text-align: justify;
+    list-style: none;
+}
+
+li span {
+    padding: auto;
+}
+
+.row {
+  margin:0;
+}
+
+
+/* -----------------------------------------NAVBAR (& GLOBAL) ----------------------------------------- */
+
+a {
+    text-decoration: none;
+    word-wrap: break-word;
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+    outline: 0;
+}
+
+a:before,
+a:after {
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+.dropdown-menu{
+    text-align: center;
+}
+
+.dropdown ul li a{
+  color: @maroon;
+  background-color: white;
+  font-weight: bold;
+}
+
+.nav-pills {
+  height: @navbar-height;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus{
+
+}
+
+.nav-pills>li>a {
+  padding: 18px 15px;
+  color: @maroon;
+}
+
+.navbar-header {
+  height: 100%;
+}
+
+.navbar {
+  font-weight: 800;
+  font-size: @navbar-font-size;
+  height: @navbar-height;
+  background-color: @navbar-background-color;
+  margin-bottom: @navbar-height; /* height of the navbar */
+}
+
+.navbar:hover{
+}
+
+.navbar-fixed-top{
+  margin-bottom: 0px;
+}
+
+.navbar-fixed-top .container{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.navbar-brand {
+  background: url('../resources/logos/navbar_logo.png');
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 270px;  /* TODO: can we not hardcode this? */
+  padding: 0;
+}
+
+/*------------------------------------------ FOOTER ---------------------------------*/
+
+footer {
+  padding: 15px 0 15px 0;
+  background-color: @footer-background-color;
+  color: @maroon;
+
+  span {
+    display: inline-block;
+    width: 33%;
+    padding: 0 5%;
+  }
+}
+
+.page-wrap {
+  height: 100%;
+  /* equal to footer height */
+  margin-bottom: -@footer-height;
+}
+
+.page-wrap:after {
+  display: block;
+}
+
+custom-footer, footer, .page-wrap:after {
+  height: @footer-height;
+}
+
+#footer-text {
+  text-align: left;
+}
+
+#footer-social-media-icons {
+  text-align: center;
+}
+
+#footer-copyright {
+  text-align: right;
+}
+
+
+/*----------------------------------------- LANDING ----------------------------------*/
+
+#blurb {
+  text-align: center;
+
+  #blurb-logo {
+    background: url('../resources/logos/large_logo.png');
+    height: 50%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  p {
+    padding-top: 10%;
+    width: 50%;
+    margin: 10% auto;
+    border-top: 2px solid @maroon;
+  }
+}
+
+#landing-background {
+  background-color: white;
+  padding-top: @navbar-height;
+  padding-bottom: @footer-height;
+
+  #profile-left {
+    background: url('../resources/images/sonya.jpg');
+    float: left;
+  }
+
+  #profile-right {
+    background: url('../resources/images/patricia.png');
+    float: right;
+  }
+
+  #profile-right, #profile-left {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: white;
+    text-align: center;
+    padding: 5%;
+
+    p {
+      height: 50%;
+    }
+
+    .profile-description {
+      border-top: 1px solid white;
+      padding-top: @text-font-size;
+    }
+  }
+
+  // #profile-right:hover, #profile-left:hover {
+  //   -webkit-box-shadow: inset 6px 10px 141px 200px rgba(0,0,0,0.42);
+  //   -moz-box-shadow: inset 6px 10px 141px 200px rgba(0,0,0,0.42);
+  //   box-shadow: inset 6px 10px 141px 200px rgba(0,0,0,0.42);
+  // }
+
+  div {
+    width: 33%;
+    height: 100%;
+    display: inline-block;
+    margin: auto;
+  }
+}
+
+
+/* ----------------------------------------- MEDIA QUERIES ----------------------------------------- */
+
+@media (max-width: 480px){
+
+  /* NAVBAR */
+    #r0{
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .navbar .navbar-collapse {
+        padding: 10px;
+        max-height: none;
+      }
+
+    .navbar ul {
+        float: none;
+    }
+
+    .navbar ul:not {
+        display: block;
+    }
+
+    .navbar li {
+        float: none;
+        display: block;
+    }
+
+    .navbar li a {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+}
+
+@media (max-width: 690px){
+  .navbar .container{
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+  .nav-pills, .navbar-right{
+    height: auto;
+    background-color: white;
+  }
+}
+
+@media (min-width: 770px){
+      .dropdown:hover .dropdown-menu {
+        display: block;
+        border-radius: 0;
+     }
+}
+
+@media (min-width: 960px){
+  .navbar{
+      padding-left: 10%;
+      padding-right: 10%;
+     }
+}
+
+@media (max-width: 1000px) and (min-width: 690px){
+
+    #r0{
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .navbar .container{
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+}
+
