@@ -326,8 +326,8 @@ fieldset[disabled] .btn-danger.active {
 }
 .dropdown-menu {
     position: absolute;
-    top: 100%;
-    left: 0;
+    top: 50%;
+    left: -35%;
     z-index: 1000;
     display: none;
     float: left;
@@ -335,17 +335,17 @@ fieldset[disabled] .btn-danger.active {
     padding: 5px 0;
     margin: 2px 0 0;
     list-style: none;
-    font-size: 14px;
+    font-size: 20px;
     background-color: #fff;
-    border: 1px solid #ccc;
+    /*border: 1px solid #ccc;
     border: 1px solid rgba(0,0,0,.15);
     border-radius: 4px;
     -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
     box-shadow: 0 6px 12px rgba(0,0,0,.175);
-    background-clip: padding-box;
+    background-clip: padding-box;*/
 }
 
-.dropdown-menu > li > a:hover,
+/*.dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
   background-image: -webkit-linear-gradient(top, #f5f5f5 0%, #e8e8e8 100%);
   background-image: -o-linear-gradient(top, #f5f5f5 0%, #e8e8e8 100%);
@@ -354,7 +354,7 @@ fieldset[disabled] .btn-danger.active {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', endColorstr='#ffe8e8e8', GradientType=0);
   background-color: #e8e8e8;
-}
+}*/
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus {
