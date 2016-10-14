@@ -1,9 +1,11 @@
 /* -----------------------------------------GLOBAL -----------------------------------------*/
 
-@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
 
 
 /*----------------------------------------- VARIABLES ------------------------------------*/
+
 
 @pink: #fccdb1;
 @yellow: #fdeaa6;
@@ -97,8 +99,10 @@ a:after {
   height: @navbar-height;
 }
 
-.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus{
-
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus, .dropdown>ul>li>a:hover, .dropdown>ul>li>a:focus, .dropdown>ul>li>a:active {
+  color: @yellow;
+  background-color: transparent;
+  text-decoration: none;
 }
 
 .nav-pills>li>a {
@@ -116,6 +120,7 @@ a:after {
   height: @navbar-height;
   background-color: @navbar-background-color;
   margin-bottom: @navbar-height; /* height of the navbar */
+  font-family: 'Lato';
 }
 
 .navbar:hover{
@@ -173,6 +178,17 @@ custom-footer, footer, .page-wrap:after {
 
 #footer-social-media-icons {
   text-align: center;
+
+  a {
+    margin: 0 15px;
+    height: 25px;
+    width: 25px;
+
+    img {
+      width: inherit;
+      height: inherit;
+    }
+  }
 }
 
 #footer-copyright {
