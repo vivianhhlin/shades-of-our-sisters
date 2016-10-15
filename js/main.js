@@ -62,6 +62,7 @@ THIS FILE IS THE FIRST JAVASCRIPT FILE THAT IS LOADED AND CONTROLS THE INITIALAL
       jquery) {
     require([
         'controllers/landing-ctrl',
+        'controllers/about-ctrl',
       ],
       function() {
         app.config(['$routeProvider', function($routeProvider) {

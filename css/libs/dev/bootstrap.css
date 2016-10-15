@@ -934,8 +934,8 @@ select[multiple].input-lg {
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
-  color: #ffffff;
-  background-color: #337ab7;
+  /*color: #ffffff;
+  background-color: #337ab7;*/
 }
 .nav-stacked > li {
   float: none;

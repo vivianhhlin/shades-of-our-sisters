@@ -17,6 +17,12 @@ define(['servicesFactory'],
 
         service.init = function(scope) {
           _scope = scope;
+
+          // Add the key-value pairs to render HTML content
+          for (var key in service) {
+            _scope[key] = service[key];
+          }
+
           return service;
         };
 

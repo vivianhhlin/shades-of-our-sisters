@@ -7,7 +7,7 @@ define(["controllersFactory",
   'directives/landing-directives'],
   function(controllersFactory) {
 
-  controllersFactory.controller('LandingCtrl',
+  controllersFactory.controller('AboutCtrl',
     ['$scope',
      'ContentService',
      'TabService',
@@ -18,6 +18,6 @@ define(["controllersFactory",
 
       $scope.contentService = contentService.init($scope);
       $scope.tabService = tabService.init($scope);
-      $scope.tabService.setTab(0);
+      $scope.tabService.setTab(1);
   }]);
 });
