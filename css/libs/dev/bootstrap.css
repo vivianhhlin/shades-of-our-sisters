@@ -213,7 +213,6 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
@@ -825,7 +824,6 @@ select[multiple].input-lg {
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
-  text-decoration: none;
 }
 .nav > li.disabled > a {
   color: #777777;
