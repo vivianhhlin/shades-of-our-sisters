@@ -22,9 +22,5 @@ define(["controllersFactory",
 
       // Only on the landing page should the navbar and footer should be transparent
       // Rather than loading a different css sheet for the different pages, keep the same css sheet and use jQuery to govern this behaviour
-      $(document).ready(function() {
-        $('.navbar').css('background', 'transparent');
-        $('footer').css('background', 'transparent');
-      });
   }]);
 });

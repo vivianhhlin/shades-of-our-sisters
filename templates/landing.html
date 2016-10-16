@@ -1,20 +1,24 @@
 <navbar></navbar>
 
 <div id='landing-background' class='page-wrap'>
-    <div id='profile-left' class='profile' ng-init='left_hidden=true' ng-mouseover='left_hidden=false' ng-mouseleave='left_hidden=true'>
-      <p class='profile-name' ng-hide=left_hidden>{{contentService.profile_left_name}}</p>
-      <!--p class='profile-description' ng-hide=left_hidden>{{contentService.profile_left_description}}</p-->
-    </div>
-
-    <div id='blurb'>
-      <div id='blurb-logo'>
+    <div class='col' id='col-left'>
+      <div id='profile-left' class='profile' ng-init='left_hidden=true' ng-mouseover='left_hidden=false' ng-mouseleave='left_hidden=true'>
+        <p class='profile-name' ng-hide=left_hidden>{{contentService.profile_left_name}}</p>
+        <!--p class='profile-description' ng-hide=left_hidden>{{contentService.profile_left_description}}</p-->
       </div>
-      <p>{{contentService.blurb}}</p>
     </div>
 
-    <div id='profile-right' class='profile' ng-init='right_hidden=true' ng-mouseover='right_hidden=false' ng-mouseleave='right_hidden=true'>
-      <p class='profile-name' ng-hide=right_hidden>{{contentService.profile_right_name}}</p>
-      <!--p class='profile-description' ng-hide=right_hidden>{{contentService.profile_right_description}}</p-->
+    <div class='col' id='blurb'>
+        <div id='blurb-logo'>
+        </div>
+        <!--p>{{contentService.blurb}}</p-->
+    </div>
+
+    <div class='col' id='col-right'>
+      <div id='profile-right' class='profile' ng-init='right_hidden=true' ng-mouseover='right_hidden=false' ng-mouseleave='right_hidden=true'>
+        <p class='profile-name' ng-hide=right_hidden>{{contentService.profile_right_name}}</p>
+        <!--p class='profile-description' ng-hide=right_hidden>{{contentService.profile_right_description}}</p-->
+      </div>
     </div>
 </div>
 
