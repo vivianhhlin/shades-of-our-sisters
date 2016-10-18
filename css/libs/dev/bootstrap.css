@@ -1351,7 +1351,6 @@ select[multiple].input-lg {
   }
   .navbar-right {
     float: right !important;
-    margin-right: -15px;
   }
   .navbar-right ~ .navbar-right {
     margin-right: 0;

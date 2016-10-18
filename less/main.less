@@ -150,6 +150,14 @@ a:after {
   background-position: 0;
 }
 
+.nav {
+  background-color: rgba(1,1,1,0.7);
+}
+
+.glyphicon {
+  color: @maroon;
+}
+
 /*------------------------------------------ FOOTER ---------------------------------*/
 
 custom-footer, footer {
@@ -314,10 +322,14 @@ footer {
   }
 }
 
-@media (min-width: 770px){
-      .dropdown:hover .dropdown-menu {
+@media (min-width: 768px){
+    .dropdown:hover .dropdown-menu {
         display: block;
         border-radius: 0;
+     }
+
+     .nav {
+       background-color: transparent;
      }
 }
 
