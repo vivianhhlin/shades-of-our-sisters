@@ -38,7 +38,7 @@ html * {
 }
 
 html, body, #ng-view, #ng-body {
-  height: 100%;
+  height: auto;
   width: 100%;
   padding:0;
   margin:0;
@@ -112,6 +112,8 @@ a:after {
 .nav-pills>li>a {
   padding: 18px 15px;
   color: @maroon;
+  display: flex;
+  align-items: center;
 }
 
 .navbar-header {
@@ -145,38 +147,30 @@ a:after {
   background-size: contain;
   width: 270px;  /* TODO: can we not hardcode this? */
   padding: 0;
+  background-position: 0;
 }
 
 /*------------------------------------------ FOOTER ---------------------------------*/
 
+custom-footer, footer {
+  height: @footer-height;
+}
+
 footer {
+  float: left;
+  width: 100%;
   padding: 15px 0 15px 0;
   color: @maroon;
   font-family: 'Lato';
+  height: @footer-height;
+  display: flex;
+  align-items: center;
 
   span {
     display: inline-block;
     width: 33%;
     padding: 0 5%;
   }
-}
-
-.page-wrap {
-  height: 100%;
-  /* equal to footer height */
-  margin-bottom: -@footer-height;
-}
-
-.page-wrap:after {
-  display: block;
-}
-
-custom-footer, footer, .page-wrap:after {
-  height: @footer-height;
-}
-
-#footer-text {
-  text-align: left;
 }
 
 #footer-social-media-icons {
@@ -194,25 +188,19 @@ custom-footer, footer, .page-wrap:after {
   }
 }
 
-#footer-copyright {
-  text-align: right;
-}
-
-
 /*----------------------------------------- LANDING ----------------------------------*/
+
+#blurb-logo {
+  background: url('../resources/logos/large_logo.png');
+  height: 50%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 
 #blurb {
   text-align: center;
   float: left;
-
-  #blurb-logo {
-    background: url('../resources/logos/large_logo.png');
-    height: 100%;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 0;
-  }
 
   p {
     padding-top: 10%;
@@ -222,11 +210,15 @@ custom-footer, footer, .page-wrap:after {
   }
 }
 
+.profile-name {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Lato';
+}
+
 #landing-background {
-  background-color: white;
   padding-top: @navbar-height;
-  padding-bottom: @footer-height;
-  background-image: url('../resources/images/placeholder-background.jpg');
+  // background-image: url('../resources/images/placeholder-background.jpg');
 
   #profile-left {
     background: url('../resources/images/sonya.jpg');
@@ -244,25 +236,14 @@ custom-footer, footer, .page-wrap:after {
     background: url('http://placehold.it/350x150');
   }
 
-  .profile-name {
-    font-size: 30px;
-    font-weight: bold;
-    font-family: 'Lato';
-  }
-
   #profile-right, #profile-left {
     background-position: 50%;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     color: white;
     text-align: center;
-    height: 72%;
-    width: 70%;
     margin: auto;
     padding: 5%;
-    -webkit-box-shadow: 0px 13px 26px 0px rgba(0,0,0,0.68);
-    -moz-box-shadow: 0px 13px 26px 0px rgba(0,0,0,0.68);
-    box-shadow: 0px 13px 26px 0px rgba(0,0,0,0.68);
 
     p {
       height: 50%;
@@ -274,26 +255,16 @@ custom-footer, footer, .page-wrap:after {
     }
   }
 
-  // #profile-right:hover, #profile-left:hover {
-  //   -webkit-box-shadow: inset 6px 10px 141px 200px rgba(0,0,0,0.42);
-  //   -moz-box-shadow: inset 6px 10px 141px 200px rgba(0,0,0,0.42);
-  //   box-shadow: inset 6px 10px 141px 200px rgba(0,0,0,0.42);
-  // }
-
-  .col {
-    width: 33%;
-    height: 100%;
-    display: flex;
-    margin: 0;
-    align-items: center;
-  }
-
   #col-left {
     float: left;
+    align-items: center;
+    display: flex;
   }
 
   #col-right {
     float: right;
+    align-items: center;
+    display: flex;
   }
 }
 
@@ -340,7 +311,6 @@ custom-footer, footer, .page-wrap:after {
 
   .nav-pills, .navbar-right{
     height: auto;
-    background-color: white;
   }
 }
 
@@ -368,5 +338,111 @@ custom-footer, footer, .page-wrap:after {
       padding-left: 10px;
       padding-right: 10px;
     }
+
+    #col-left, #col-right {
+      width: 50%;
+    }
 }
 
+/*----------- TABLET -----------*/
+@media (max-width: 1200px) {
+  #mobile-blurb {
+    display: inline-block;
+    width: 100%;
+    height: 800px;
+
+    #blurb-logo {
+      background-position: 50%;
+    }
+
+    p {
+      padding-top: 10%;
+      width: 50%;
+      margin: 10% auto;
+      border-top: 2px solid @maroon;
+      text-align: center;
+    }
+  }
+
+  #blurb {
+    display: none;
+  }
+
+  #landing-background {
+    #col-left, #col-right {
+      width: 50%;
+    }
+
+    #profile-left, #profile-right {
+      width: 100%;
+      height: 600px;
+    }
+  }
+
+  .page-wrap {
+    height: auto;
+  }
+}
+
+/*--------- DESKTOP ---------*/
+
+@media (min-width: 1200px) {
+
+  html, body, #ng-view, #ng-body {
+    height: 100%;
+  }
+
+  .page-wrap {
+    height: 100%;
+    /* equal to footer height */
+    margin-bottom: -@footer-height;
+  }
+
+  .page-wrap:after {
+    display: block;
+  }
+
+  .page-wrap:after {
+    height: @footer-height;
+  }
+
+  #footer-text {
+    text-align: left;
+  }
+
+  #footer-copyright {
+    text-align: right;
+  }
+
+  /*---------------------------------------- LANDING ----------------------------------*/
+
+  #mobile-blurb {
+    display: none;
+  }
+
+  #landing-background {
+    padding-bottom: @footer-height;
+
+    #profile-right, #profile-left {
+      color: white;
+      text-align: center;
+      height: 90%;
+      width: 90%;
+      -webkit-box-shadow: 0px 13px 26px 0px rgba(0,0,0,0.68);
+      -moz-box-shadow: 0px 13px 26px 0px rgba(0,0,0,0.68);
+      box-shadow: 0px 13px 26px 0px rgba(0,0,0,0.68);
+    }
+
+    // #profile-right:hover, #profile-left:hover {
+    //   -webkit-box-shadow: inset 6px 10px 141px 200px rgba(0,0,0,0.42);
+    //   -moz-box-shadow: inset 6px 10px 141px 200px rgba(0,0,0,0.42);
+    //   box-shadow: inset 6px 10px 141px 200px rgba(0,0,0,0.42);
+    // }
+
+    .col {
+      width: 33%;
+      height: 100%;
+      margin: 0;
+    }
+  }
+}

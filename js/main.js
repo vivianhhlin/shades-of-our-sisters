@@ -14,6 +14,7 @@ THIS FILE IS THE FIRST JAVASCRIPT FILE THAT IS LOADED AND CONTROLS THE INITIALAL
     paths: {
       'angular': 'libs/dev/angular-1.5',
       'angularRoute': 'libs/min/angular-route-min-1.2.24',
+      'bootstrapJS': 'libs/dev/bootstrap',
       'jquery': 'libs/dev/jquery-3.1.1',
     },
     shim: {
@@ -22,6 +23,9 @@ THIS FILE IS THE FIRST JAVASCRIPT FILE THAT IS LOADED AND CONTROLS THE INITIALAL
       },
       'angularRoute': {
         deps: ['angular']
+      },
+      'bootstrapJS': {
+        deps: ['jquery']
       },
       'jquery': {
         exports: '$'
@@ -57,9 +61,11 @@ THIS FILE IS THE FIRST JAVASCRIPT FILE THAT IS LOADED AND CONTROLS THE INITIALAL
 
   //BOOTSTRAP ANGULARJS TO THE MOTHER 'APP'
   require(['app',
-    'jquery'],
+    'jquery',
+    'bootstrapJS'],
     function(app,
-      jquery) {
+      jquery,
+      bootstrapJS) {
     require([
         'controllers/landing-ctrl',
         'controllers/about-ctrl',

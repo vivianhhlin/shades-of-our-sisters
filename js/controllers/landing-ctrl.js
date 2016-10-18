@@ -20,7 +20,6 @@ define(["controllersFactory",
       $scope.tabService = tabService.init($scope);
       $scope.tabService.setTab(0);
 
-      // Only on the landing page should the navbar and footer should be transparent
-      // Rather than loading a different css sheet for the different pages, keep the same css sheet and use jQuery to govern this behaviour
+      $('html').css('background', 'url(../resources/images/placeholder-background.jpg)');
   }]);
 });
