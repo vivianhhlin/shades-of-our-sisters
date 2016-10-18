@@ -97,7 +97,7 @@ a:after {
 }
 
 .nav-pills {
-  height: @navbar-height;
+    height: auto;
 }
 
 .nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus, .dropdown>ul>li>a:hover, .dropdown>ul>li>a:focus, .dropdown>ul>li>a:active, .nav > li > a:hover, .nav > li > a:focus, nav > li > a:active {
@@ -109,11 +109,15 @@ a:after {
     text-decoration: underline;
 }
 
+.nav-pills > li {
+  float: none;
+  padding: 10px;
+  text-align: right;
+}
+
 .nav-pills>li>a {
   padding: 18px 15px;
   color: @maroon;
-  display: flex;
-  align-items: center;
 }
 
 .navbar-header {
@@ -129,6 +133,11 @@ a:after {
 }
 
 .navbar:hover{
+}
+
+.navbar-collapse {
+  width: 50%;
+  float: right;
 }
 
 .navbar-fixed-top{
@@ -322,6 +331,7 @@ footer {
   }
 }
 
+/*-------- BREAKING POINT FOR NAVBAR ------*/
 @media (min-width: 768px){
     .dropdown:hover .dropdown-menu {
         display: block;
@@ -330,6 +340,21 @@ footer {
 
      .nav {
        background-color: transparent;
+     }
+
+     .nav-pills>li {
+      float: right;
+      padding: 0;
+      text-align: center;
+     }
+
+     .nav-pills {
+       height: @navbar-height;
+     }
+
+     .nav-pills>li>a {
+       display: flex;
+       align-items: center;
      }
 }
 

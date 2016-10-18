@@ -953,7 +953,6 @@ select[multiple].input-lg {
   }
 }
 .nav-pills > li {
-  float: left;
   height: 100%;
 }
 .nav-pills > li > a {
