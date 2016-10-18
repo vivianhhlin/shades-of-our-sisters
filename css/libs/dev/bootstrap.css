@@ -27,7 +27,6 @@ aside,
 details,
 figcaption,
 figure,
-footer,
 header,
 hgroup,
 main,
@@ -189,6 +188,41 @@ textarea {
 optgroup {
   font-weight: bold;
 }
+.collapse {
+  display: none;
+}
+.collapse.in {
+  display: block;
+}
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height .35s ease;
+          transition: height .35s ease;
+}
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../../fonts/glyphicons-halflings-regular.eot');
+  src: url('../../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.glyphicon-align-justify:before {
+    content: "\e055";
+}
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -213,11 +247,10 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
-  background-color: #ffffff;
+  /*background-color: #ffffff;*/
 }
 input,
 button,
@@ -821,11 +854,9 @@ select[multiple].input-lg {
 }
 .nav > li > a {
   position: relative;
-  display: block;
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
-  text-decoration: none;
 }
 .nav > li.disabled > a {
   color: #777777;
@@ -922,7 +953,6 @@ select[multiple].input-lg {
   }
 }
 .nav-pills > li {
-  float: left;
   height: 100%;
 }
 .nav-pills > li > a {
@@ -934,8 +964,8 @@ select[multiple].input-lg {
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
-  color: #ffffff;
-  background-color: #337ab7;
+  /*color: #ffffff;
+  background-color: #337ab7;*/
 }
 .nav-stacked > li {
   float: none;
@@ -1320,7 +1350,6 @@ select[multiple].input-lg {
   }
   .navbar-right {
     float: right !important;
-    margin-right: -15px;
   }
   .navbar-right ~ .navbar-right {
     margin-right: 0;

@@ -7,7 +7,7 @@ define(["controllersFactory",
   'directives/landing-directives'],
   function(controllersFactory) {
 
-  controllersFactory.controller('LandingCtrl',
+  controllersFactory.controller('AboutCtrl',
     ['$scope',
      'ContentService',
      'TabService',
@@ -18,8 +18,6 @@ define(["controllersFactory",
 
       $scope.contentService = contentService.init($scope);
       $scope.tabService = tabService.init($scope);
-      $scope.tabService.setTab(0);
-
-      $('html').css('background', 'url(../resources/images/placeholder-background.jpg)');
+      $scope.tabService.setTab(1);
   }]);
 });

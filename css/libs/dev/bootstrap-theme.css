@@ -326,17 +326,15 @@ fieldset[disabled] .btn-danger.active {
 }
 .dropdown-menu {
     position: absolute;
-    top: 50%;
-    left: -35%;
+    top: 60%;
+    left: 13%;
     z-index: 1000;
     display: none;
     float: left;
-    min-width: 160px;
     padding: 5px 0;
     margin: 2px 0 0;
     list-style: none;
     font-size: 20px;
-    background-color: #fff;
     /*border: 1px solid #ccc;
     border: 1px solid rgba(0,0,0,.15);
     border-radius: 4px;
