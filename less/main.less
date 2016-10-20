@@ -16,6 +16,7 @@
 @green: #98bcaa;
 @maroon: #8b181a;
 @brown: #b27253;
+@salmon: #FBCDB1;
 
 @footer-height: 80px;
 @footer-background-color: white;
@@ -160,7 +161,7 @@ a:after {
 }
 
 .nav {
-  background-color: rgba(1,1,1,0.7);
+  background-color: rgba(251,205,177, 0.95);
 }
 
 .glyphicon {
@@ -187,6 +188,14 @@ footer {
     display: inline-block;
     width: 33%;
     padding: 0 5%;
+  }
+
+  #footer-text {
+    text-align: left;
+  }
+
+  #footer-copyright {
+    text-align: right;
   }
 }
 
@@ -329,6 +338,29 @@ footer {
   .nav-pills, .navbar-right{
     height: auto;
   }
+
+  #landing-background {
+    #col-right, #col-left {
+      width: 100%;
+      height: 30%;
+    }
+  }
+}
+
+@media (min-width: 690px) {
+  #landing-background {
+    #col-left, #col-right {
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #footer-social-media-icons {
+    a {
+      margin: 0 3px;
+    }
+  }
 }
 
 /*-------- BREAKING POINT FOR NAVBAR ------*/
@@ -360,9 +392,9 @@ footer {
 
 @media (min-width: 960px){
   .navbar{
-      padding-left: 10%;
-      padding-right: 10%;
-     }
+    padding-left: 10%;
+    padding-right: 10%;
+   }
 }
 
 @media (max-width: 1000px) and (min-width: 690px){
@@ -381,12 +413,17 @@ footer {
     }
 }
 
+@media (min-width: 980px) {
+
+}
+
 /*----------- TABLET -----------*/
 @media (max-width: 1200px) {
   #mobile-blurb {
     display: inline-block;
     width: 100%;
-    height: 800px;
+    height: 600px;
+    background-color: @green;
 
     #blurb-logo {
       background-position: 50%;
@@ -406,13 +443,10 @@ footer {
   }
 
   #landing-background {
-    #col-left, #col-right {
-      width: 50%;
-    }
-
     #profile-left, #profile-right {
       width: 100%;
-      height: 600px;
+      height: 300px;
+      background-position-y: 0;
     }
   }
 
@@ -424,6 +458,10 @@ footer {
 /*--------- DESKTOP ---------*/
 
 @media (min-width: 1200px) {
+  #landing-background {
+    background-image: url('../resources/images/light-background.png');
+    background-size: cover;
+  }
 
   html, body, #ng-view, #ng-body {
     height: 100%;
@@ -443,14 +481,6 @@ footer {
     height: @footer-height;
   }
 
-  #footer-text {
-    text-align: left;
-  }
-
-  #footer-copyright {
-    text-align: right;
-  }
-
   /*---------------------------------------- LANDING ----------------------------------*/
 
   #mobile-blurb {
@@ -458,6 +488,10 @@ footer {
   }
 
   #landing-background {
+    #col-left, #col-right {
+       width: 33%;
+     }
+
     padding-bottom: @footer-height;
 
     #profile-right, #profile-left {
@@ -483,3 +517,4 @@ footer {
     }
   }
 }
+
