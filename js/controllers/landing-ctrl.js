@@ -19,7 +19,5 @@ define(["controllersFactory",
       $scope.contentService = contentService.init($scope);
       $scope.tabService = tabService.init($scope);
       $scope.tabService.setTab(0);
-
-      // $('html').css('background', 'url(../resources/images/placeholder-background.jpg)');
   }]);
 });
