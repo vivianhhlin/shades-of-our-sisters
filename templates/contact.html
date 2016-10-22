@@ -2,10 +2,10 @@
 
 <div id='contact-background' class='page-wrap'>
   <div id='form-wrapper'>
-    <h1>Contact</h1>
+    <p id=contact-header>Contact</p>
 
     <form id='contact-form' name='userForm' ng-submit='submit()' ng-controller='ContactCtrl' action="" method="post">
-      <label>Name</label>
+      <label id='name_label'>Name</label>
       <input name="name" ng-model='name' placeholder="Ashley Peterson" type="text" required>
 
       <label>Email</label>
