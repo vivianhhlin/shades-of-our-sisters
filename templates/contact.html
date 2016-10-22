@@ -4,15 +4,16 @@
   <div id='form-wrapper'>
     <h1>Contact</h1>
 
-    <form id='contact-form' action="" method="post">
+    <form id='contact-form' name='userForm' ng-submit='submit()' ng-controller='ContactCtrl' action="" method="post">
       <label>Name</label>
-      <input name="name" placeholder="Ashley Peterson" type="text">
+      <input name="name" ng-model='name' placeholder="Ashley Peterson" type="text" required>
 
       <label>Email</label>
-      <input name="email" placeholder="yourname@gmail.com" type="text">
+      <input name="email" type='email' ng-model='email' placeholder="yourname@gmail.com" type="text" required>
+      <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
 
       <label>Message</label>
-      <textarea cols="15" name="message" rows="10">
+      <textarea ng-model='message' cols="15" name="message" rows="10" required>
       </textarea>
 
       <input id="submit" type="submit" value="SUBMIT">
