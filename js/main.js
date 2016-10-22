@@ -16,7 +16,7 @@ THIS FILE IS THE FIRST JAVASCRIPT FILE THAT IS LOADED AND CONTROLS THE INITIALAL
       'angularRoute': 'libs/min/angular-route-min-1.2.24',
       'bootstrapJS': 'libs/dev/bootstrap',
       'jquery': 'libs/dev/jquery-3.1.1',
-      'email': 'https://smtpjs.com/smtp',
+      'email': 'libs/min/smtp',
     },
     shim: {
       'angular': {
