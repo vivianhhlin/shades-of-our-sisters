@@ -69,11 +69,15 @@ THIS FILE IS THE FIRST JAVASCRIPT FILE THAT IS LOADED AND CONTROLS THE INITIALAL
     require([
         'controllers/landing-ctrl',
         'controllers/about-ctrl',
+        'controllers/contact-ctrl',
       ],
       function() {
         app.config(['$routeProvider', function($routeProvider) {
           $routeProvider
             .when('/', {templateUrl: 'templates/landing.html', controller: "LandingCtrl"}).
+            otherwise({redirectTo: '/'})
+
+            .when('/contact', {templateUrl: 'templates/contact.html', controller: "ContactCtrl"}).
             otherwise({redirectTo: '/'})
 
             .when('/about', {templateUrl: 'templates/about.html', controller: "AboutCtrl"}).
