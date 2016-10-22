@@ -17,6 +17,7 @@
 @maroon: #8b181a;
 @brown: #b27253;
 @salmon: #FBCDB1;
+@gray: #E6E6E6;
 
 @footer-height: 80px;
 @footer-background-color: white;
@@ -62,6 +63,10 @@ li span {
   margin:0;
 }
 
+.page-wrap {
+  padding-top: @navbar-height;
+}
+
 
 /* -----------------------------------------NAVBAR (& GLOBAL) ----------------------------------------- */
 
@@ -98,7 +103,7 @@ a:after {
 }
 
 .nav-pills {
-    height: auto;
+  height: auto;
 }
 
 .nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus, .dropdown>ul>li>a:hover, .dropdown>ul>li>a:focus, .dropdown>ul>li>a:active, .nav > li > a:hover, .nav > li > a:focus, nav > li > a:active {
@@ -131,9 +136,6 @@ a:after {
   margin-bottom: @navbar-height; /* height of the navbar */
   font-family: 'Lato';
   height: @navbar-height;
-}
-
-.navbar:hover{
 }
 
 .navbar-collapse {
@@ -243,8 +245,6 @@ footer {
 }
 
 #landing-background {
-  padding-top: @navbar-height;
-
   #profile-left {
     background: url('../resources/images/sonya.jpg');
   }
@@ -294,6 +294,58 @@ footer {
 }
 
 
+/*-------------------- CONTACT -------------------*/
+
+#contact-background {
+  font-family: 'Lato';
+
+  #form-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: @green;
+  }
+}
+
+.help-block {
+  color: @maroon;
+}
+
+#contact-form {
+  width: 80%;
+  margin: 5% auto;
+  padding: 5%;
+  font-size: 18px;
+  background-color: white;
+  text-align: center;
+
+  input, textarea {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    background-color: @gray;
+  }
+
+  label {
+    width: 100%;
+    color: @maroon;
+    text-align: left;
+    margin-top: 30px;
+  }
+
+  #submit {
+    width: auto;
+    padding: 10px 51px;
+    background-color: transparent;
+    border: 1px solid @maroon;
+    color: @maroon;
+    margin-top: 30px;
+  }
+
+  input:focus, textarea:focus {
+    outline: none;
+  }
+}
+
 /* ----------------------------------------- MEDIA QUERIES ----------------------------------------- */
 
 @media (max-width: 480px){
@@ -325,6 +377,11 @@ footer {
     .navbar li a {
         padding-top: 12px;
         padding-bottom: 12px;
+    }
+
+    #footer-social-media-icons a {
+        height: 15px;
+        width: 15px;
     }
 }
 
@@ -374,7 +431,7 @@ footer {
      }
 
      .nav-pills>li {
-      float: right;
+      float: left;
       padding: 0;
       text-align: center;
      }
@@ -390,7 +447,7 @@ footer {
 }
 
 @media (min-width: 960px){
-  .navbar{
+  .navbar {
     padding-left: 10%;
     padding-right: 10%;
    }
@@ -412,11 +469,10 @@ footer {
     }
 }
 
-@media (min-width: 980px) {
-
-}
 
 /*----------- TABLET -----------*/
+
+
 @media (max-width: 1200px) {
   #mobile-blurb {
     display: inline-block;
@@ -457,6 +513,12 @@ footer {
 /*--------- DESKTOP ---------*/
 
 @media (min-width: 1200px) {
+  #contact-form {
+    width: 1000px;
+    margin: 50px auto;
+    padding: 75px;
+  }
+
   #landing-background {
     background-image: url('../resources/images/light-background.png');
     background-size: cover;

@@ -16,6 +16,7 @@ THIS FILE IS THE FIRST JAVASCRIPT FILE THAT IS LOADED AND CONTROLS THE INITIALAL
       'angularRoute': 'libs/min/angular-route-min-1.2.24',
       'bootstrapJS': 'libs/dev/bootstrap',
       'jquery': 'libs/dev/jquery-3.1.1',
+      'email': 'http://smtpjs.com/smtp',
     },
     shim: {
       'angular': {
@@ -62,18 +63,24 @@ THIS FILE IS THE FIRST JAVASCRIPT FILE THAT IS LOADED AND CONTROLS THE INITIALAL
   //BOOTSTRAP ANGULARJS TO THE MOTHER 'APP'
   require(['app',
     'jquery',
-    'bootstrapJS'],
+    'bootstrapJS',
+    'email'],
     function(app,
       jquery,
-      bootstrapJS) {
+      bootstrapJS,
+      email) {
     require([
         'controllers/landing-ctrl',
         'controllers/about-ctrl',
+        'controllers/contact-ctrl',
       ],
       function() {
         app.config(['$routeProvider', function($routeProvider) {
           $routeProvider
             .when('/', {templateUrl: 'templates/landing.html', controller: "LandingCtrl"}).
+            otherwise({redirectTo: '/'})
+
+            .when('/contact', {templateUrl: 'templates/contact.html', controller: "ContactCtrl"}).
             otherwise({redirectTo: '/'})
 
             .when('/about', {templateUrl: 'templates/about.html', controller: "AboutCtrl"}).
