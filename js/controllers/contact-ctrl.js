@@ -17,7 +17,7 @@ define(["controllersFactory",
       tabService) {
       var _destination_email = 'info@shadesofoursisters.com';
       var _email_subject = 'Shades of our Sisters';
-      var _token = '';
+      var _token = 'ef747346-4a86-4c35-b597-96ac5730dab1';
 
       $scope.contentService = contentService.init($scope);
       $scope.tabService = tabService.init($scope);
