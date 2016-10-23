@@ -4,7 +4,7 @@
   <div id='form-wrapper'>
     <p id=contact-header>Contact</p>
 
-    <form id='contact-form' name='userForm' ng-submit='submit()' ng-controller='ContactCtrl' action="" method="post">
+    <form id='contact-form' name='userForm' action="mailto:info@shadesofoursisters.com?subject=Hi Team" method="post" enctype="text/plain">
       <label id='name_label'>Name</label>
       <input name="name" ng-model='name' placeholder="Ashley Peterson" type="text" required>
 
