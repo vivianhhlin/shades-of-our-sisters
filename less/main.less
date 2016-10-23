@@ -67,6 +67,26 @@ li span {
   padding-top: @navbar-height;
 }
 
+.section-header {
+  font-size: 26px;
+  color: #8b181a;
+  text-align: center;
+  font-weight: bold;
+  margin: auto;
+  width: auto;
+  font-family: 'Lato';
+}
+
+.section-divider {
+  width: 50px;
+  border-top: 1px solid @maroon;
+  margin: 30px auto;
+}
+
+.section-wrapper {
+  padding: 30px 0;
+  width: 100%;
+}
 
 /* -----------------------------------------NAVBAR (& GLOBAL) ----------------------------------------- */
 
@@ -310,17 +330,6 @@ footer {
   color: @maroon;
 }
 
-#contact-header {
-  font-size: 26px;
-  color: #8b181a;
-  text-align: center;
-  padding: 30px 0;
-  border-bottom: 1px solid #8b181a;
-  font-weight: bold;
-  margin: auto;
-  width: 92px;
-}
-
 #contact-form {
   width: 80%;
   margin: 5% auto;
@@ -358,6 +367,24 @@ footer {
 
   input:focus, textarea:focus {
     outline: none;
+  }
+}
+
+/*--------------------------- ABOUT ----------------------------*/
+
+#about-background {
+  background-color: @green;
+
+  div {
+    height: auto;
+  }
+}
+
+#blurb-section {
+  background: url('http://placehold.it/350x150');
+
+  #blurb-wrapper {
+
   }
 }
 
