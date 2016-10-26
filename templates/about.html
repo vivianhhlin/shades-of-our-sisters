@@ -27,23 +27,23 @@
       <p class='section-header'>Team</p>
       <div class='section-divider'></div>
 
-      <div class='team-wrapper' ng-repeat='teammate in teammates'>
-        <img src={{teammate.profile_pic}}>
-        <p class='section-header'>{{teammate.name}}</p>
-        <p class='team-role'>{{teammate.role}}</p>
-        <p class='team-sub-role'>{{teammate.sub_role}}</p>
-        <div class='team-social-media'>
-          <span>
-            <a href={{teammate.facebook}} class='team-facebook'></a>
-          </span>
-
-          <span>
-            <a href={{teammate.twitter}} class='team-twitter'></a>
-          </span>
-
-          <span>
-            <a ng-ref="mailto:{{teammate.email}}" class='team-email'></a>
-          </span>
+      <div id='team-table'>
+        <div class='team-wrapper' ng-repeat='teammate in teammates'>
+          <img src={{teammate.profile_pic}}>
+          <p class='section-header'>{{teammate.name}}</p>
+          <p class='team-role'>{{teammate.role}}</p>
+          <p class='team-sub-role'>{{teammate.sub_role}}</p>
+          <div class='team-social-media'>
+              <a href={{teammate.facebook}} class='team-facebook'>
+                <img src='resources/icons/facebook.png'>
+              </a>
+              <a href={{teammate.twitter}} class='team-twitter'>
+                <img src='resources/icons/twitter.png'>
+              </a>
+              <a ng-ref="mailto:{{teammate.email}}" class='team-email'>
+                <img src='resources/icons/email.png'>
+              </a>
+          </div>
         </div>
       </div>
     </div>
