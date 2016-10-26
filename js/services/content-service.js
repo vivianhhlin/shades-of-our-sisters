@@ -104,6 +104,17 @@ define(['servicesFactory'],
               'twitter': 'http://twitter.com',
               'email': 'info@shadesofoursisters.com'
             }
+          ],
+          sponsors: [
+            {
+              'image': 'http://placehold.it/150x150'
+            },
+            {
+              'image': 'http://placehold.it/150x150'
+            },
+            {
+              'image': 'http://placehold.it/150x150'
+            }
           ]
         };
 
