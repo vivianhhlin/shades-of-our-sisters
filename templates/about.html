@@ -34,13 +34,19 @@
           <p class='team-role'>{{teammate.role}}</p>
           <p class='team-sub-role'>{{teammate.sub_role}}</p>
           <div class='team-social-media'>
-              <a href={{teammate.facebook}} class='team-facebook'>
+              <a href={{teammate.facebook}} class='team-facebook' ng-show='teammate.facebook'>
                 <img src='resources/icons/facebook.png'>
               </a>
-              <a href={{teammate.twitter}} class='team-twitter'>
+              <a href={{teammate.instagram}} class='team-instagram' ng-show='teammate.instagram'>
+              <img src='resources/icons/instagram.png'>
+              </a>
+              <a href={{teammate.website}} class='team-website' ng-show='teammate.website'>
+              <img src='resources/icons/website.png'>
+              </a>
+              <a href={{teammate.twitter}} class='team-twitter' ng-show='teammate.twitter'>
                 <img src='resources/icons/twitter.png'>
               </a>
-              <a ng-ref="mailto:{{teammate.email}}" class='team-email'>
+              <a ng-ref="mailto:{{teammate.email}}" class='team-email' ng-show='teammate.email'>
                 <img src='resources/icons/email.png'>
               </a>
           </div>
