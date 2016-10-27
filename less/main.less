@@ -24,8 +24,9 @@
 @navbar-height: @footer-height;
 @navbar-background-color: white;
 @navbar-font-size: 20px;
-
 @text-font-size: 12px;
+@subtitle-font-size: 14px;
+@section-wrapper-padding: 30px;
 
 html * {
   -webkit-font-smoothing: antialiased;
@@ -64,9 +65,29 @@ li span {
 }
 
 .page-wrap {
-  padding-top: @navbar-height;
+  margin-top: @navbar-height;
 }
 
+.section-header {
+  font-size: 26px;
+  color: #8b181a;
+  text-align: center;
+  font-weight: bold;
+  margin: auto;
+  width: auto;
+  font-family: 'Lato';
+}
+
+.section-divider {
+  width: 50px;
+  border-top: 1px solid @maroon;
+  margin: 30px auto;
+}
+
+.section-wrapper {
+  padding: @section-wrapper-padding;
+  width: 100%;
+}
 
 /* -----------------------------------------NAVBAR (& GLOBAL) ----------------------------------------- */
 
@@ -245,6 +266,9 @@ footer {
 }
 
 #landing-background {
+  margin-top: 0;
+  padding-top: @navbar-height;
+
   #profile-left {
     background: url('../resources/images/sonya.jpg');
   }
@@ -310,19 +334,8 @@ footer {
   color: @maroon;
 }
 
-#contact-header {
-  font-size: 26px;
-  color: #8b181a;
-  text-align: center;
-  padding: 30px 0;
-  border-bottom: 1px solid #8b181a;
-  font-weight: bold;
-  margin: auto;
-  width: 92px;
-}
-
 #contact-form {
-  width: 80%;
+  width: 100%;
   margin: 5% auto;
   padding: 5%;
   font-size: 18px;
@@ -358,6 +371,107 @@ footer {
 
   input:focus, textarea:focus {
     outline: none;
+  }
+}
+
+/*--------------------------- ABOUT ----------------------------*/
+
+#about-background {
+  height: auto;
+  background-color: @green;
+
+  div {
+    height: auto;
+  }
+}
+
+#blurb-section {
+  background: url('http://placehold.it/350x150');
+}
+
+#blurb-wrapper {
+  background-color: white;
+
+  p {
+    padding: 30px;
+    text-align: center;
+  }
+
+  img {
+    display: none;
+  }
+}
+
+.producers-wrapper {
+  background-color: white;
+  height: 500px;
+  padding: 15px;
+  margin: 10% auto;
+  text-align: center;
+
+  img {
+    border-radius: 100px;
+    margin: 30px;
+  }
+
+  .section-header {
+    font-size: @subtitle-font-size;
+  }
+}
+
+.producers-blurb {
+  font-family: 'Quadraat';
+}
+
+#about-background {
+  .team-wrapper {
+    background-color: white;
+    height: 300px;
+    width: 25%;
+    padding: 15px;
+    text-align: center;
+    display: inline-table;
+
+    img {
+      border-radius: 100px;
+      margin: 15px;
+    }
+
+    .section-header {
+      font-size: @subtitle-font-size;
+    }
+
+    .team-role, .team-sub-role {
+      color: @maroon;
+      font-family: 'Lato';
+      font-size: @subtitle-font-size;
+      height: @subtitle-font-size + 4px;
+    }
+  }
+
+  #team-table {
+    margin: auto;
+    text-align: center;
+  }
+
+  .team-social-media {
+    img {
+      width: 25px;
+      height: 25px;
+      border-radius: 0;
+      margin: 15px 5px;
+    }
+  }
+}
+
+#credits-section {
+  background-color: white;
+  margin-bottom: @footer-height;
+
+  .sponsor {
+    width: 33%;
+    display: inline-block;
+    text-align: center;
   }
 }
 
@@ -416,6 +530,13 @@ footer {
       height: 30%;
     }
   }
+
+  #about-background {
+    .team-wrapper {
+      width: 100%;
+      margin: 5% 0;
+    }
+  }
 }
 
 @media (min-width: 690px) {
@@ -430,6 +551,13 @@ footer {
   #footer-social-media-icons {
     a {
       margin: 0 3px;
+    }
+  }
+
+  #credits-section {
+    .sponsor {
+      width: 100%;
+      margin: 5px auto;
     }
   }
 }
@@ -459,12 +587,45 @@ footer {
        display: flex;
        align-items: center;
      }
+
+     #blurb-section {
+       background: @green;
+     }
+
+     #blurb-wrapper {
+       background-color: white;
+
+       p {
+         padding: 30px;
+         text-align: center;
+         display: inline-block;
+         width: 70%;
+       }
+
+       img {
+         display: inline-block;
+         width: 30%;
+         float: right;
+         padding: 30px;
+       }
+     }
+
+     .section-wrapper {
+       padding: @section-wrapper-padding 80px;
+       width: 100%;
+     }
 }
 
 @media (min-width: 960px){
   .navbar {
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 0;
+    padding-right: 0%;
+   }
+
+   .producers-wrapper {
+     width: 30%;
+     margin: 1.33%;
+     display: inline-block;
    }
 }
 
@@ -528,6 +689,10 @@ footer {
 /*--------- DESKTOP ---------*/
 
 @media (min-width: 1200px) {
+  .section-wrapper {
+    padding: @section-wrapper-padding 20%;
+  }
+
   #contact-form {
     width: 900px;
     margin: 30px auto;
@@ -579,12 +744,6 @@ footer {
       -moz-box-shadow: 0px 13px 26px 0px rgba(0,0,0,0.68);
       box-shadow: 0px 13px 26px 0px rgba(0,0,0,0.68);
     }
-
-    // #profile-right:hover, #profile-left:hover {
-    //   -webkit-box-shadow: inset 6px 10px 141px 200px rgba(0,0,0,0.42);
-    //   -moz-box-shadow: inset 6px 10px 141px 200px rgba(0,0,0,0.42);
-    //   box-shadow: inset 6px 10px 141px 200px rgba(0,0,0,0.42);
-    // }
 
     .col {
       width: 33%;

@@ -1,6 +1,61 @@
 <navbar></navbar>
 
 <div id='about-background' class='page-wrap'>
+    <div id='blurb-section' class='section-wrapper'>
+      <p class='section-header'>What is Shades of Our Sisters?</p>
+      <div class='section-divider'></div>
+
+      <div id='blurb-wrapper'>
+        <p>{{contentService.about_blurb}}</p>
+        <img src='http://placehold.it/350x150'>
+      </div>
+    </div>
+
+    <div id='producers-section' class='section-wrapper'>
+      <p class='section-header'>Producers</p>
+      <div class='section-divider'></div>
+
+      <div class='producers-wrapper' ng-repeat='producer in producers'>
+        <img src={{producer.profile_pic}}>
+        <p class='section-header'>{{producer.name}}</p>
+        <div class='section-divider'></div>
+        <div class='producers-blurb'>{{producer.blurb}}</div>
+      </div>
+    </div>
+
+    <div id='team-section' class='section-wrapper'>
+      <p class='section-header'>Team</p>
+      <div class='section-divider'></div>
+
+      <div id='team-table'>
+        <div class='team-wrapper' ng-repeat='teammate in teammates'>
+          <img src={{teammate.profile_pic}}>
+          <p class='section-header'>{{teammate.name}}</p>
+          <p class='team-role'>{{teammate.role}}</p>
+          <p class='team-sub-role'>{{teammate.sub_role}}</p>
+          <div class='team-social-media'>
+              <a href={{teammate.facebook}} class='team-facebook'>
+                <img src='resources/icons/facebook.png'>
+              </a>
+              <a href={{teammate.twitter}} class='team-twitter'>
+                <img src='resources/icons/twitter.png'>
+              </a>
+              <a ng-ref="mailto:{{teammate.email}}" class='team-email'>
+                <img src='resources/icons/email.png'>
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id='credits-section' class='section-wrapper'>
+      <p class='section-header'>Thanks</p>
+      <div class='section-divider'></div>
+
+      <div class='sponsor' ng-repeat='sponsor in sponsors'>
+        <img src={{sponsor.image}}>
+      </div>
+    </div>
 </div>
 
 <custom-footer></custom-footer>
